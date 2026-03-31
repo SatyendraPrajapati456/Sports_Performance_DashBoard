@@ -1,312 +1,179 @@
-⚽ Player Stats Dashboard — Sports Performance Analytics
-📌 Overview
+# ⚽ Sports Performance Dashboard
 
-The Player Stats Dashboard is the first page of the Sports Performance Analytics project built using Power BI.
-This page focuses on individual player performance analysis, allowing users to explore scoring efficiency, match participation, and top scorers across FIFA World Cup seasons.
+<p align="center">
+  <img src="https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black" alt="Power BI"/>
+  <img src="https://img.shields.io/badge/Sport-Football%20%2F%20Soccer-1DB954?style=for-the-badge&logo=fifa&logoColor=white" alt="Football"/>
+  <img src="https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge" alt="Status"/>
+  <img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" alt="License"/>
+</p>
 
-The dashboard is fully interactive, filter-driven, and designed for football analytics use cases.
+<p align="center">
+  <b>An interactive Power BI dashboard for in-depth Football / Soccer performance analytics — covering player stats, team comparisons, live match data, and dynamic visualizations.</b>
+</p>
 
-<img width="1276" height="730" alt="Screenshot 2025-12-22 115608" src="https://github.com/user-attachments/assets/7039724c-3731-4f83-be77-70c3778187cb" />
+---
 
-🎯 Objectives
+## 📸 Dashboard Preview
 
-Analyze player-level performance metrics
+> *Below are representative previews of the type of analytics and visuals this dashboard delivers.*
 
-Identify top goal scorers
+### 🏟️ Overview — Match & League Analytics
+![Dashboard Overview](https://community.fabric.microsoft.com/t5/image/serverpage/image-id/250001iF79DC3BED7E58BD3/image-size/large?v=v2&px=999)
 
-Measure scoring efficiency and strike rate
+---
 
-Enable dynamic filtering by team, season, position, venue, and match result
+### 📊 Player Performance Stats
+![Player Stats](https://radacad.com/wp-content/uploads/2014/07/report2.png)
 
-📊 Key KPIs (Top Cards)
-KPI	Description
-Total Matches	Total number of matches played based on filters
-Average Score	Average goals scored per match
-Strike Rate	Goals scored per 90 minutes played
-📈 Visual Components
-🔹 1. Player Performance Table
+---
 
-Columns:
+### ⚔️ Team Comparison View
+![Team Comparison](https://community.fabric.microsoft.com/t5/image/serverpage/image-id/321764i9E3CA2ABA3C94A03/image-size/large?v=v2&px=999)
 
-Player Name
+---
 
-Total Goals
+## 📋 Table of Contents
 
-Total Assists
+- [About the Project](#-about-the-project)
+- [Features](#-features)
+- [Tech Stack](#-tech-stack)
+- [Getting Started](#-getting-started)
+- [Dashboard Pages](#-dashboard-pages)
+- [Data Sources](#-data-sources)
+- [Project Structure](#-project-structure)
+- [Contributing](#-contributing)
+- [License](#-license)
+- [Author](#-author)
 
-Total Minutes Played
+---
 
-Purpose:
+## 📌 About the Project
 
-Compare individual player contributions
+The **Sports Performance Dashboard** is a comprehensive Power BI solution designed to give football analysts, coaches, and fans a 360° view of the beautiful game. From individual player metrics to full team head-to-head comparisons and match-day data, this dashboard turns raw football statistics into actionable visual insights.
 
-Sort players by goals or minutes played
+Whether you're scouting a player, comparing two rival clubs, or tracking a team's form over a season — this dashboard has you covered.
 
-Analyze attacking involvement
+---
 
-🔹 2. Top 10 Goal Scorers (Bar Chart)
+## ✨ Features
 
-Displays Top 10 players by total goals
+| Feature | Description |
+|---|---|
+| 🧍 **Player Performance Stats** | Goals, assists, pass accuracy, dribbles, tackles, and more — per player |
+| ⚔️ **Team Comparison** | Side-by-side metrics for any two teams across key performance indicators |
+| 📡 **Live / Match Data** | Real-time or recent match scores, results, and fixture data |
+| 📈 **Charts & Visualizations** | Bar charts, radar charts, heatmaps, trend lines, and KPI cards |
+| 🔍 **Interactive Filters** | Slice data by season, league, team, position, and date range |
+| 🏆 **League Standings** | Dynamic table with points, wins, losses, goal difference |
 
-Dynamically updates with slicers
+---
 
-Helps quickly identify top scorers
+## 🛠️ Tech Stack
 
-🎛 Interactive Filters (Slicers)
+| Tool | Purpose |
+|---|---|
+| **Microsoft Power BI Desktop** | Dashboard design, DAX measures, data modelling |
+| **Power Query (M Language)** | Data transformation and cleaning |
+| **DAX (Data Analysis Expressions)** | Custom KPIs and calculated columns |
+| **Excel / CSV** | Underlying data sources |
 
-The following slicers are available at the top of the dashboard:
+---
 
-Team
+## 🚀 Getting Started
 
-World Cup Year (Range)
+### Prerequisites
 
-Match Result
+- [Microsoft Power BI Desktop](https://powerbi.microsoft.com/en-us/downloads/) (free) — latest version recommended
+- Git (to clone the repository)
 
-Position
+### Installation
 
-Venue
+```bash
+# 1. Clone the repository
+git clone https://github.com/SatyendraPrajapati456/Sports_Performance_DashBoard.git
 
-These slicers allow users to:
+# 2. Navigate into the project folder
+cd Sports_Performance_DashBoard
+```
 
-Drill down into specific seasons or teams
+### Opening the Dashboard
 
-Compare player performance across different conditions
+1. Launch **Power BI Desktop**.
+2. Go to **File → Open Report** and select the `.pbix` file from the cloned folder.
+3. If prompted, refresh the data source connections.
+4. Explore the dashboard pages using the navigation tabs at the bottom.
 
-Perform focused analysis with real-time updates
+---
 
-🧮 Key Metrics Logic (DAX-Based)
+## 📂 Dashboard Pages
 
-Total Matches → Distinct count of Match IDs
+```
+Sports Performance Dashboard
+│
+├── 🏠  Home / Overview          → Key metrics at a glance
+├── 🧍  Player Stats             → Individual player performance breakdown
+├── ⚔️  Team Comparison          → Head-to-head team analytics
+├── 📡  Match Data               → Live scores & recent fixtures
+└── 📈  Trends & Visualizations  → Season trends, form charts, heatmaps
+```
 
-Average Score → Total Goals ÷ Total Matches
+---
 
-Strike Rate → (Goals × 90) ÷ Minutes Played
+## 📊 Data Sources
 
-Top Scorers → Ranked dynamically using RANKX
+The dashboard is powered by football statistics data which may include:
 
-All calculations are handled through optimized DAX measures.
+- **Match results** — Scores, venues, dates, referees
+- **Player data** — Goals, assists, minutes played, cards, shots on target
+- **Team data** — Possession, passes, xG (expected goals), defensive stats
+- **League tables** — Standings, points, goal difference
 
-🏆 Team Performance Dashboard — Sports Performance Analytics
-📌 Overview
+> 📝 *Data files are included in the `/data` directory of this repository (CSV / Excel format).*
 
-The Team Performance Dashboard is the second page of the Sports Performance Analytics project built using Power BI.
-This page focuses on team-level performance evaluation, enabling comparison of wins, goal contributions, and scoring efficiency across FIFA World Cup teams.
+---
 
-It provides a clear, KPI-driven view of how teams perform under different conditions such as venue, season, and match outcomes.
+## 🗂️ Project Structure
 
+```
+Sports_Performance_DashBoard/
+│
+├── 📁 data/                    # Raw and cleaned data files (.csv / .xlsx)
+├── 📁 assets/                  # Images, icons, and background assets
+├── 📄 Sports_Dashboard.pbix    # Main Power BI report file
+└── 📄 README.md                # Project documentation
+```
 
-<img width="1276" height="727" alt="Screenshot 2025-12-22 115627" src="https://github.com/user-attachments/assets/c09e4d24-6d3b-4d85-aae9-d92a098ddae4" />
+---
 
-🎯 Objectives
+## 🤝 Contributing
 
-Compare team performance using win percentage
+Contributions are welcome! If you'd like to improve the dashboard or add new features:
 
-Analyze goal contribution distribution across teams
+1. **Fork** the repository
+2. Create a new branch: `git checkout -b feature/your-feature-name`
+3. Make your changes and commit: `git commit -m "Add: your feature description"`
+4. Push to the branch: `git push origin feature/your-feature-name`
+5. Open a **Pull Request**
 
-Measure scoring efficiency using shot conversion rate
+---
 
-Identify top-performing teams by wins
+## 📃 License
 
-📊 Key KPIs (Top Cards)
-KPI	Description
-Win %	Percentage of matches won by selected teams
-Player Contribution %	Percentage of team goals contributed by players
-Shot Conversion %	Goals scored per shot attempted
-📈 Visual Components
-🔹 1. Team Performance Matrix
+This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
 
-Columns:
+---
 
-Team
+## 👨‍💻 Author
 
-Win %
+**Satyendra Prajapati**
 
-Total Goals
+<p>
+  <a href="https://github.com/SatyendraPrajapati456">
+    <img src="https://img.shields.io/badge/GitHub-SatyendraPrajapati456-181717?style=for-the-badge&logo=github" alt="GitHub"/>
+  </a>
+</p>
 
-Total Goals Conceded
+---
 
-Purpose:
-
-Side-by-side team comparison
-
-Conditional formatting highlights performance strength
-
-Quickly identify strong and weak teams
-
-🔹 2. Wins by Team (Bar Chart)
-
-Displays total wins per team
-
-Sorted in descending order
-
-Highlights top-performing teams in tournaments
-
-🔹 3. Goal Contribution Share (Pie Chart)
-
-Shows proportion of goals contributed by each team
-
-Useful for understanding offensive dominance
-
-Automatically updates based on filters
-
-🎛 Interactive Filters (Slicers)
-
-The dashboard includes the following slicers:
-
-Team
-
-World Cup Year (Range)
-
-Match Result
-
-Position
-
-Venue
-
-These slicers allow users to:
-
-Drill into specific teams or seasons
-
-Compare team performance across venues
-
-Analyze results by match outcomes
-
-🧮 Key Metrics Logic (DAX-Based)
-
-Win % → Total Wins ÷ Total Matches
-
-Player Contribution % → Player Goal Contribution ÷ Team Goals
-
-Shot Conversion % → Goals ÷ Shots
-
-Wins by Team → Sum of Win Flag grouped by Team
-
-All KPIs are dynamically recalculated based on slicer selections.
-
-
-📈 Season Analytics & Predictive Insights — Sports Performance Dashboard
-📌 Overview
-
-The Season Analytics & Predictive Insights page is the third and most analytical section of the Sports Performance Dashboard built using Power BI.
-This page focuses on multi-season performance trends, team consistency, and basic predictive indicators to evaluate success patterns across FIFA World Cup tournaments.
-
-It helps users understand how teams and players evolve over time and identify performance stability and efficiency.
-
-
-<img width="1277" height="730" alt="Screenshot 2025-12-22 115648" src="https://github.com/user-attachments/assets/45629818-44ff-49f2-bc0a-0d0af1b7bc6b" />
-
-🎯 Objectives
-
-Analyze goal trends across World Cup seasons
-
-Measure team consistency and stability
-
-Evaluate win probability using historical data
-
-Identify relationships between shots and goals
-
-Compare team performance across multiple seasons
-
-📊 Key KPIs (Top Cards)
-KPI	Description
-Win Probability	Likelihood of winning based on historical results
-Consistency Index	Measures stability of team performance across matches
-📈 Visual Components
-🔹 1. Goals Trend by World Cup Year (Line Chart)
-
-Displays total goals scored across seasons
-
-Highlights peaks and dips in tournament scoring trends
-
-Useful for understanding era-wise performance changes
-
-🔹 2. Team vs Season Performance (Heatmap Matrix)
-
-Rows: Team
-Columns: World Cup Year
-Values: Total Goals
-
-Purpose:
-
-Quickly identify strong and weak seasons for each team
-
-Color-coded performance intensity
-
-Enables fast season-to-season comparison
-
-🔹 3. Shots vs Goals Relationship (Scatter Chart)
-
-X-Axis: Total Shots
-
-Y-Axis: Total Goals
-
-Data Points: Players
-
-Purpose:
-
-Analyze scoring efficiency
-
-Identify high-conversion players
-
-Detect outliers (many shots, few goals)
-
-🎛 Interactive Filters (Slicers)
-
-Available slicers:
-
-Team
-
-World Cup Year (Range)
-
-Match Result
-
-Position
-
-Venue
-
-These filters allow:
-
-Season-specific analysis
-
-Venue-based performance evaluation
-
-Player and team segmentation
-
-🧮 Predictive & Analytical Logic (DAX-Based)
-
-Win Probability → Wins ÷ (Wins + Losses)
-
-Consistency Index → Average Goals ÷ Standard Deviation of Goals
-
-Performance Trends → Aggregated season-wise goal metrics
-
-These measures provide directional predictive insights, not machine-learning predictions.
-
-
-🏗 Data Model
-
-Fact Table: Fact_Sports
-
-Dimensions: Team, Player, Season, Match Result
-
-Schema: Star Schema
-
-This design ensures:
-
-Accurate seasonal aggregation
-
-High performance with slicers
-
-Scalable analytics framework
-
-<img width="694" height="622" alt="Screenshot 2025-12-22 123702" src="https://github.com/user-attachments/assets/58efa6c7-688f-4a28-bdc7-7e7ca3eee499" />
-
-
-
-
-
-
-
-
-
-
+<p align="center">⭐ If you found this project useful, please consider giving it a star!</p>
+<p align="center">Made with ❤️ and ⚽ by Satyendra Prajapati</p>
