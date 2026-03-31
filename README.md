@@ -25,8 +25,7 @@
 ---
 
 ### 📊 Player Performance Stats
-![Player Stats](<img width="1276" height="727" alt="Screenshot 2025-12-22 115627" src="https://github.com/user-attachments/assets/c09e4d24-6d3b-4d85-aae9-d92a098ddae4" />
-)
+![Player Stats]<img width="1276" height="727" alt="Screenshot 2025-12-22 115627" src="https://github.com/user-attachments/assets/c09e4d24-6d3b-4d85-aae9-d92a098ddae4" />
 
 ---
 
