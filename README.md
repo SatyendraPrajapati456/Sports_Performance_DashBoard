@@ -18,17 +18,22 @@
 > *Below are representative previews of the type of analytics and visuals this dashboard delivers.*
 
 ### 🏟️ Overview — Match & League Analytics
-![Dashboard Overview](https://community.fabric.microsoft.com/t5/image/serverpage/image-id/250001iF79DC3BED7E58BD3/image-size/large?v=v2&px=999)
+![Dashboard Overview]
+<img width="1276" height="730" alt="Screenshot 2025-12-22 115608" src="https://github.com/user-attachments/assets/7039724c-3731-4f83-be77-70c3778187cb" />
+
 
 ---
 
 ### 📊 Player Performance Stats
-![Player Stats](https://radacad.com/wp-content/uploads/2014/07/report2.png)
+![Player Stats](<img width="1276" height="727" alt="Screenshot 2025-12-22 115627" src="https://github.com/user-attachments/assets/c09e4d24-6d3b-4d85-aae9-d92a098ddae4" />
+)
 
 ---
 
 ### ⚔️ Team Comparison View
-![Team Comparison](https://community.fabric.microsoft.com/t5/image/serverpage/image-id/321764i9E3CA2ABA3C94A03/image-size/large?v=v2&px=999)
+![Team Comparison]
+<img width="1277" height="730" alt="Screenshot 2025-12-22 115648" src="https://github.com/user-attachments/assets/45629818-44ff-49f2-bc0a-0d0af1b7bc6b" />
+
 
 ---
 
